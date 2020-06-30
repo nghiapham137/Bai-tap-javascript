@@ -1,6 +1,3 @@
-let inputPhysic;
-let inputChemis;
-let inputBio;
 
 inputPhysic = prompt("Hãy nhập điểm Vật lý:")
 inputChemis = prompt("Hãy nhập điểm Hóa:")
@@ -14,7 +11,6 @@ let Average = (Physic + Chemis + Bio)/3;
 let Average1 = parseFloat(Average);
 let Sum = Physic + Chemis + Bio;
 
-document.write("Trung bình điểm của học sinh là: "+ Average1);
-document.write("<br/>");
-document.write("Tổng điểm của học sinh là: "+ Sum);
+document.write("Trung bình điểm của học sinh là: "+ Average1 + "<br/>" + "Tổng điểm: "+ Sum);
+
 

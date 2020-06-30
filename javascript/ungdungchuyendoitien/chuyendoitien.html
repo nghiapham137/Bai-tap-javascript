@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyendoitien</title>
+
+</head>
+<body>
+<h2>Ứng dụng chuyển đổi tiền tệ</h2>
+<form>
+    <p>
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" value="">
+        <label for="select">From Currency</label>
+        <select id="select">
+            <option value="USD">USD</option>
+            <option value="JPY">JPY</option>
+            <option value="VND">VND</option>
+        </select>
+    </p>
+    <p>
+        <label for="select2">To Currency</label>
+        <select id="select2">
+            <option value="USD">USD</option>
+            <option value="JPY">JPY</option>
+            <option value="VND">VND</option>
+        </select>
+        <input type="text" id="result" value="">
+    </p>
+    <p>
+    <input type="button" value="Convert" onclick="convert();">
+    <input type="reset" value="Reset">
+    </p>
+</form>
+<script src="chucnang.js"></script>
+</body>
+</html>

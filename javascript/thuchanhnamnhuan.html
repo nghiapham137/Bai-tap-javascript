@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>namnhuan</title>
 </head>
 <body>
-$END$
+<script>
+    let year = parseInt(prompt("Nhập năm vào đây: "));
+    let namnhuan = false;
+
+    let chiahet4 = year%4 == 0;
+    if (chiahet4){
+        let chiahet100 = year % 100 == 0;
+        if (chiahet100){
+            let chiahet400 = year % 400 == 0;
+            if (chiahet400){
+                namnhuan = true;
+            }
+        }else namnhuan = true;
+    }
+    if (namnhuan){
+        alert(year + "là năm nhuận");
+    }else {
+        alert(year + "là năm ko nhuận");
+    }
+</script>
+
 </body>
 </html>

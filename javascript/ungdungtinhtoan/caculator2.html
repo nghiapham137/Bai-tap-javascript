@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculator2</title>
+</head>
+<body>
+<label for="sothu1">Số thứ 1</label><br>
+<input type="text" id="sothu1"><br>
+<label for="sothu2">Số thứ 2</label><br>
+<input type="text" id="sothu2"><br>
+<input type="button" value="Cộng" onclick="tinhToan('cong')">
+<input type="button" value="Trừ" onclick="tinhToan('tru')">
+<input type="button" value="Nhân" onclick="tinhToan('nhan')">
+<input type="button" value="Chia" onclick="tinhToan('chia')"><br>
+<label for="dapan">Đáp án</label><br>
+<input type="text" id="dapan">
+<script>
+    function tinhToan(callmethod) {
+        var sothu1 = parseFloat(document.getElementById("sothu1").value);
+        var sothu2 = parseFloat(document.getElementById("sothu2").value);
+        var result = 0;
+
+
+        if (callmethod == 'cong'){
+            result = sothu1+sothu2;
+        }
+        if (callmethod == 'tru'){
+            result = sothu1 - sothu2;
+        }
+        if (callmethod == 'nhan'){
+            result = sothu1*sothu2;
+        }
+        if (callmethod == 'chia'){
+            result = sothu1 / sothu2;
+        }
+        document.getElementById("dapan").value = result;
+    }
+
+</script>
+</body>
+</html>

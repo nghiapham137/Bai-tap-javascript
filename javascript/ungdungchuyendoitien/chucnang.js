@@ -1,43 +1,32 @@
-function convert() {
-var amount = document.getElementById("amount");
-var select = document.getElementById("select");
-var select2 = document.getElementById("select2");
-var result = document.getElementById("result");
-var total=0;
-if (select.value === "USD" && select2.value === "USD"){
-    result.value= amount.value;
-    document.getElementById("result").innerHTML= total;
+function convert(amount,select,select2) {
+var result = amount;
+if (select === select2){
+   return amount;
 }
-if(select.value === "USD" && select2.value === "JPY"){
-    result.value = (amount.value*107);
-    document.getElementById("result").innerHTML= total;
+if(select === "USD" && select2 === "JPY"){
+    result= (amount*107);
 }
-if(select.value === "USD" && select2.value === "VND"){
-    result.value = (amount.value*23200);
-    document.getElementById("result").innerHTML= total;
+if(select === "USD" && select2 === "VND"){
+    result = (amount*23200);
 }
-if (select.value === "JPY" && select2.value === "JPY"){
-    result.value = amount.value;
-    document.getElementById("result").innerHTML= total;
+if (select === "JPY" && select2 === "USD"){
+    result = (amount/107);
 }
-if (select.value === "JPY" && select2.value === "USD"){
-    result.value = (amount.value/107);
-    document.getElementById("result").innerHTML= total;
+if (select === "JPY" && select2 === "VND"){
+    result = (amount*200);
 }
-if (select.value === "JPY" && select2.value === "VND"){
-    result.value = (amount.value*200);
-    document.getElementById("result").innerHTML= total;
+if (select === "VND" && select2 === "USD"){
+    result = (amount/23200);
 }
-if (select.value === "VND" && select2.value === "VND"){
-    result.value = amount.value;
-    document.getElementById("result").innerHTML= total;
+if (select === "VND" && select2 === "JPY" ){
+    result = (amount/200);
 }
-if (select.value === "VND" && select2.value === "USD"){
-    result.value = (amount.value/23200);
-    document.getElementById("result").innerHTML= total;
+return result;
 }
-if (select.value === "VND" && select2.value === "JPY" ){
-    result.value = (amount.value/200);
-    document.getElementById("result").innerHTML= total;
-}
+function changeValue() {
+    var amount = document.getElementById("amount").value;
+    var select = document.getElementById("select").value;
+    var select2 = document.getElementById("select2").value;
+    var result = convert(amount,select,select2);
+    document.getElementById("ketqua").value = result;
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day caculate</title>
+</head>
+<body id="body">
+    <input id="month" type="text">
+    <input type="button" value="Tính số ngày" onclick="dayCaculate()"><br>
+    <input type="text" id="result" style="border: 0">
+</body>
+<script>
+    function dayCaculate() {
+        var month = parseInt(document.getElementById("month").value);
+        switch (month) {
+            case 2:
+                document.getElementById("result").value = "Tháng " + month + " có 28, 29 ngày";
+                break;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("result").value ="Tháng " + month + " có 31 ngày";
+                break;
+            default:
+                document.getElementById("result").value ="Tháng " + month + " có 30 ngày";
+                break;
+
+        }
+    }
+</script>
+</html>

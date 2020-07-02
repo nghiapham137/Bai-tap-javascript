@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>keyboard event</title>
+</head>
+<body onload="doReady()">
+<img id="miranda" src="Miranda_Kerr_(6796105579)_(cropped).jpg" style="position: absolute; left: 0; top: 0;" height="200" width="150">
+
+</body>
+<script>
+    //Xây dựng các hàm xử lý khi nhấn phím
+    function upArrowPressed() {
+        let element = document.getElementById("miranda");
+        element.style.top = parseInt(element.style.top) - 10 + 'px';
+    }
+    function downArrowPressed() {
+        var element = document.getElementById("miranda");
+        element.style.top = parseInt(element.style.top) + 10 + 'px';
+    }
+    function leftArrowPressed() {
+        var element = document.getElementById("miranda");
+        element.style.left = parseInt(element.style.left) - 10 + 'px';
+    }
+    function rigthArrowPressed() {
+        var element = document.getElementById("miranda");
+        element.style.left = parseInt(element.style.left) + 10 + 'px';
+    }
+    //Xây dựng các hàm nhận phím
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+             case 39:
+                 rigthArrowPressed();
+                 break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+    //Xây dựng hàm doReady
+    function doReady() {
+        window.addEventListener('keydown',moveSelection);
+    }
+</script>
+</html>

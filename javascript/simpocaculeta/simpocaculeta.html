@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sim pồ ca cu lê tà</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <form>
+        <input type="text" id="Display">
+        <input type="text" id ="firstnum">
+        <input type="text" id = "operator">
+        <table id="caltable">
+            <tr>
+                <td><button type="button" class="button" onclick="addDigit(1)">1</button></td>
+                <td><button type="button" class="button" onclick="addDigit(2)">2</button></td>
+                <td><button type="button" class="button" onclick="addDigit(3)">3</button></td>
+                <td><button type="button" class="button" onclick="addOp('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="button" onclick="addDigit(4)">4</button></td>
+                <td><button type="button" class="button" onclick="addDigit(5)">5</button></td>
+                <td><button type="button" class="button" onclick="addDigit(6)">6</button></td>
+                <td><button type="button" class="button" onclick="addOp('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="button" onclick="addDigit(7)">7</button></td>
+                <td><button type="button" class="button" onclick="addDigit(8)">8</button></td>
+                <td><button type="button" class="button" onclick="addDigit(9)">9</button></td>
+                <td><button type="button" class="button" onclick="addOp('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="button" onclick="Clear()">C</button></td>
+                <td><button type="button" class="button" onclick="addDigit(0)">0</button></td>
+                <td><button type="button" class="button" onclick="Caculate()">=</button></td>
+                <td><button type="button" class="button" onclick="addOp('/')">/</button></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+<script src="js.js"></script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+</head>
+<body>
+<div id="app" style="margin-left: 500px; margin-top: 150px">
+    <h2>Do you love me?</h2>
+    <img src="download%20(2).jpg"><br>
+    <button type="button" id="yes" onclick="Yes()">Yes</button>
+    <button type="button" id="no" style="width: 50px; height: 50px" onmouseover="No()">No</button>
+</div>
+
+</body>
+<script>
+    function Yes() {
+        alert("I love you too! <3");
+    }
+    function No() {
+        var no = null;
+        no = document.getElementById("no");
+        no.style.position = 'absolute';
+        no.style.left = '0px';
+        no.style.top = '0px';
+
+        no.style.left = Math.round(window.innerWidth*Math.random()) + 'px';
+        no.style.top = Math.round(window.innerHeight*Math.random()) + 'px';
+        changeBackground();
+    }
+    function changeBackground() {
+        var x = Math.floor(Math.random()*256);
+        var y = Math.floor(Math.random()*256);
+        var z = Math.floor(Math.random()*256);
+        var bgColor = "rgb("+ x + "," + y + "," + z + ")";
+
+        document.getElementById("no").style.background = bgColor;
+    }
+
+
+
+
+</script>
+</html>

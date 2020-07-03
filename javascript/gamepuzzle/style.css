@@ -1,0 +1,9 @@
+.images{
+    height: 140px;
+    width: 700px;
+}
+#dip{
+    width: 700px;
+    height: 720px;
+    background: linear-gradient(to right,green,blue);
+}

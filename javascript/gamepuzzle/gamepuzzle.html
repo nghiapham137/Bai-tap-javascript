@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="dip">
+<img class="images" src="images/r1img3.jpg" id="img1" name="3" onclick="changeImages('r1','img1')" ><br>
+<img class="images" src="images/r2img2.jpg" id="img2" name="2" onclick="changeImages('r2','img2')"><br>
+<img class="images" src="images/r3img1.jpg" id="img3" name="1" onclick="changeImages('r3','img3')"><br>
+<img class="images" src="images/r4img2.jpg" id="img4" name="2" onclick="changeImages('r4','img4')"><br>
+<img class="images" src="images/r5img1.jpg" id="img5" name="1" onclick="changeImages('r5','img5')">
+</div>
+
+<script>
+    /*Gọi hàm thay đổi hình ảnh*/
+    function changeImages(row,iD) { //gọi hàm gồm 2 tham số row(số hàng), iD(id ảnh)
+        var num = parseInt(document.getElementById(iD).name);// gán 1 số num lấy giá trị name của theo iD ảnh
+        if (num != 3){
+            num = num + 1;
+
+        }else{
+            num = 1; //nếu num = 3 thì quay lại ảnh 1
+        }
+        document.getElementById(iD).name = num;
+        var currentImg = "images/" + row + "img" + num + ".jpg";
+        document.getElementById(iD).src = currentImg;
+        check();
+        }
+    function check() {
+        var name1 = document.getElementById("img1").name;
+        var name2 = document.getElementById("img2").name;
+        var name3 = document.getElementById("img3").name;
+        var name4 = document.getElementById("img4").name;
+        var name5 = document.getElementById("img5").name;
+
+        if (name1 == name2 && name2 == name3 && name3 == name4 && name4 == name5){
+            document.getElementById("dip").style.background = 'red';
+        }else {
+            document.getElementById("dip").style.background = 'white';
+        }
+    }
+</script>
+</body>
+</html>

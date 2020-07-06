@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiền cước điện thoại hộ gia đình</title>
+</head>
+<body>
+<label for="domestic_min">Số phút gọi trong nước:</label><br>
+<input type="text" id="domestic_min"><br>
+<label for="international_min">Số phút gọi quốc tế</label><br>
+<input type="text" id="international_min"><br>
+<label for="sms">Số tin nhắn</label><br>
+<input type="text" id="sms"><br>
+<input type="button" id="btn" value="Tính" onclick="tinhCuoc()"><br>
+<label for="amount">Số tiền cước điện thoại tháng này:</label><br>
+<input type="text" id="amount" disabled >
+</body>
+<script>
+    const domestic_price = 700;
+    const international_price = 1000;
+    const sms_price = 200;
+    function tinhCuoc() {
+        var domestic_min = parseFloat(document.getElementById("domestic_min").value);
+        var international_min = parseFloat(document.getElementById("international_min").value);
+        var sms = parseInt(document.getElementById("sms").value);
+
+        domestic_pay = domestic_price * domestic_min;
+        international_pay = international_price * international_min;
+        sms_pay = sms * sms_price;
+
+        var amount = domestic_pay + international_pay + sms_pay;
+
+        document.getElementById("amount").value = amount;
+    }
+</script>
+</html>

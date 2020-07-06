@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng theo doanh số</title>
+</head>
+<body>
+<label for="doanhso">Doanh số đã bán được</label><br>
+<input type="text" id="doanhso"><br>
+<input type="button" id="button" value="Tính" onclick="tinhHoahong()"><br>
+<label for="hoahong">Số tiền hoa hồng bạn nhận được là:</label><br>
+<input type="text" id="hoahong">
+</body>
+<script>
+    function tinhHoahong() {
+        var doanhso = parseInt(document.getElementById("doanhso").value);
+        var hoahong = 0;
+        if (doanhso  < 500000 ){
+            hoahong = doanhso * 0.03;
+        }else if (doanhso < 2000000){
+            hoahong = doanhso * 0.05;
+        }else if (doanhso < 10000000){
+            hoahong = doanhso * 0.07;
+        }else {
+            hoahong = doanhso * 0.1;
+        }
+        document.getElementById("hoahong").value = hoahong.toFixed(2);
+    }
+</script>
+</html>

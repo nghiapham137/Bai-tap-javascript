@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+</head>
+<body>
+<script>
+    let bangcuuchuong;
+    bangcuuchuong = "<table border = '1' width = '300' cellspacing = '0' cellpadding = '0'>";
+    let j = 2;
+    let i = 1;
+    while (i <= 9 ){
+        bangcuuchuong = bangcuuchuong + "<tr>";
+        while (j <= 9){
+            bangcuuchuong = bangcuuchuong + "<td>" + j + "x" + i + "=" + i*j + "</td>";
+            j++;
+        }
+        bangcuuchuong = bangcuuchuong + "</tr>";
+        j = 2;
+        i++;
+    }
+    bangcuuchuong = bangcuuchuong + "</table>";
+    document.write(bangcuuchuong);
+
+</script>
+</body>
+</html>

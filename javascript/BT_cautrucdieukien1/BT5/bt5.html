@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh gia hoc luc hoc sinh</title>
+</head>
+<body>
+<label for="diemkt15p">Điểm kiểm tra 15 phút</label><br>
+<input type="text" id="diemkt15p"><br>
+<label for="diemkt45p">Điểm kiểm tra giữa kỳ</label><br>
+<input type="text" id="diemkt45p"><br>
+<label for="diemHk">Điểm thi học kỳ</label><br>
+<input type="text" id="diemHk"><br>
+<input type="button" value="Tính" id="result" onclick="tinh()">
+</body>
+<script>function tinh() {
+    var diemkt15p = parseFloat(document.getElementById("diemkt15p").value); //Diem kiem tra 15 phut
+    var diemkt45p = parseFloat(document.getElementById("diemkt45p").value); //Diem kiem tra giua ky
+    var avrTest = (diemkt15p + (diemkt45p * 2)) / 3;    //Diem tb cac bai ktra = Aver tong cac bai ktra da tinh he so
+    var diemHk = parseFloat(document.getElementById("diemHk").value);
+    var avrSem = (((avrTest * 2) + diemHk)/3).toFixed(2); //Diem tb hoc ki = Aver((avrTest * 2)+diemHK)
+    document.getElementById("result").value = avrSem;
+    document.write(avrSem);
+   if (avrSem < 3.5){
+        document.write("Bạn đạt học lực Yếu");
+    } else if (avrSem < 4.9){
+        document.write("Bạn đạt học lực Kém");
+    }else if (avrSem < 6.4){
+        document.write("Bạn đạt học lực Trung bình");
+    }else if (avrSem < 7.9){
+        document.write("Bạn đạt học lực Khá");
+    }else {
+        document.write("Bạn đạt học lực Giỏi");
+    }
+}
+</script>
+</html>

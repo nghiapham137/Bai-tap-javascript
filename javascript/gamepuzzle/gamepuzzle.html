@@ -16,13 +16,13 @@
 
 <script>
     /*Gọi hàm thay đổi hình ảnh*/
-    function changeImages(row,iD) { //gọi hàm gồm 2 tham số row(số hàng), iD(id ảnh)
-        var num = parseInt(document.getElementById(iD).name);// gán 1 số num lấy giá trị name của theo iD ảnh
+    function changeImages(row,iD) { //gọi hàm gồm 2 tham số row(số h)
+        var num = parseInt(document.getElementById(iD).name);
         if (num != 3){
             num = num + 1;
 
         }else{
-            num = 1; //nếu num = 3 thì quay lại ảnh 1
+            num = 1;
         }
         document.getElementById(iD).name = num;
         var currentImg = "images/" + row + "img" + num + ".jpg";

@@ -7,22 +7,44 @@
 </head>
 <body>
     <label class="switch">
-        <input type="checkbox" id="goodbtn">
+        <input type="checkbox" id="goodbtn" onclick="checkLap(1)">
         <span class="slider round" id="good"></span>
     </label>
     <label>Good</label>
     <br>
     <label class="switch">
-        <input type="checkbox" id="fastbtn">
+        <input type="checkbox" id="fastbtn" onclick="checkLap(2)">
         <span class="slider round" id="fast"></span>
     </label>
     <label>Fast</label>
     <br>
     <label class="switch">
-        <input type="checkbox" id="cheapbtn">
+        <input type="checkbox" id="cheapbtn" onclick="checkLap(3)">
         <span class="slider round" id="cheap"></span>
     </label>
     <label>Cheap</label>
 
 </body>
+<script>
+    function checkLap(type) {
+        good = document.getElementById("goodbtn");
+        fast = document.getElementById("fastbtn");
+        cheap = document.getElementById("cheapbtn");
+        if (good.checked == true && fast.checked == true && cheap.checked == true){
+            switch (type) {
+                case 1:
+                    fast.checked = false;
+                    break;
+                case 2:
+                    cheap.checked = false;
+                    break;
+                case 3:
+                    good.checked = false;
+                    break;
+            }
+        }
+
+    }
+
+</script>
 </html>

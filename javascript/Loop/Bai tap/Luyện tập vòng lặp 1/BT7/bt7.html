@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FizzBuzz</title>
+</head>
+<body>
+
+</body>
+<script>
+    let num = "";
+    let i;
+    for (i = 1; i<= 100; i++){
+        if (i % 3 == 0 && i % 5 == 0){
+            num = num + "FizzBuzz ";
+        }else if (i % 3 == 0){
+            num = num + "Fizz ";
+        } else if (i % 5 == 0){
+            num = num + "Buzz ";
+        }else {
+            num = num + i + " ";
+        }
+
+    }
+    document.write(num);
+</script>
+</html>

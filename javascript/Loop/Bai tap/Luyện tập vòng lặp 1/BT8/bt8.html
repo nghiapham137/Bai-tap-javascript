@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<h2>Hãy đoán thử xem!</h2>
+<input type="button" value="Chơi" onclick="nhapKhoang()">
+</body>
+<script>
+    function nhapKhoang() {
+        var min = parseInt(prompt("Hãy nhập giá trị min: "));
+        var max = parseInt(prompt("Hãy nhập giá trị max: "));
+        var num = Math.floor(Math.random() * (max - min + 1) + min);
+        var i;
+        console.log(num);
+
+        for (i = 0; i<3; i++ ){
+            var so = prompt("Hãy nhập số mà bạn đoán: ");
+            if (so == num){
+                alert("Chúc mừng bạn đã đoán đúng");
+                break;
+            }else if (so > num){
+                alert("Số bạn đoán lớn hơn kết quả");
+            }else {
+                alert("Số bạn đoán bé hơn kết quả");
+            }
+        }
+
+    }
+</script>
+</html>

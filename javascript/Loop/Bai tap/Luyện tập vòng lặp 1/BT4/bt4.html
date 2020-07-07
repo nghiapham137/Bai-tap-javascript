@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đầu tiên trong dãy fibonacci chia hết cho năm</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = 1;
+    let b = 1;
+    while (true){
+        let temp = b;
+        b = b + a;
+        a = temp;
+        if (b % 5 == 0){
+            alert(b + " Là số đầu tiên chia hết cho  trong dãy fibonacci");
+            break;
+        }
+    }
+</script>
+</html>

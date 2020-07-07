@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng 30 số chia hết cho 7</title>
+</head>
+<body>
+
+</body>
+<script>
+   var N = prompt("Nhập số N: ");
+   var M = prompt("Nhập số M: ");
+   var sum = 0;
+   var num = 0;
+   var count = 1;
+
+   while (count < N){
+       num ++;
+       if (num % M == 0){
+           sum = sum + num;
+           count ++;
+       }
+   }
+   document.write(sum);
+
+
+</script>
+</html>

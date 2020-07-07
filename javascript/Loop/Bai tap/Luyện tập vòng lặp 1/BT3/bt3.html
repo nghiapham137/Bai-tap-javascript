@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị dãy fibonacci</title>
+</head>
+<body>
+
+</body>
+<script>
+    var N = + prompt("Nhập một số N: ");
+    Display(N);
+    function Display(N) {
+        var count = 2;
+        let a = 0;
+        let b = 1;
+        document.write(a + " " + b + " ");
+        while (count < N){
+            let temp = b;
+            b = b + a;
+            a = temp;
+            document.write(b + " ");
+            count++;
+        }
+
+    }
+
+
+
+</script>
+</html>

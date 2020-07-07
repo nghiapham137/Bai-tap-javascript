@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông</title>
+</head>
+<body>
+<label for="canha">Nhập chiều dài cạnh a</label><br>
+<input type="text" id="canha"><br>
+<label for="canhb">Nhập chiều dài cạnh b</label><br>
+<input type="text" id="canhb"><br>
+<input type="button" value="Tính" onclick="tinhDientich()"><br>
+<label for="dientich">Diện tích tam giác cân là: </label><br>
+<input type="text" id="dientich">
+</body>
+<script>
+    function tinhDientich() {
+        var canha = parseFloat(document.getElementById("canha").value);
+        var canhb = parseFloat(document.getElementById("canhb").value);
+        dientich = 0;
+        if (canha == canhb){
+            dientich = 1/2 * Math.pow(canha,2);
+            alert("Đây là tam giác vuông cân");
+        }else {
+            dientich = 1 /2 * canha * canhb;
+            alert("Đây là tam giác vuông thường");
+
+        }
+        document.getElementById("dientich").value = dientich;
+    }
+</script>
+</html>

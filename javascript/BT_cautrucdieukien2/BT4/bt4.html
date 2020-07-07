@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình chữ nhật</title>
+</head>
+<body>
+<label for="canha">Nhập cạnh a: </label><br>
+<input type="text" id="canha"><br>
+<label for="canhb">Nhập cạnh b:</label><br>
+<input type="text" id="canhb"><br>
+<input type="button" value="Tính" onclick="tinhDientich()"><br>
+<label for="dientich">Diện tích hình chữ nhật là: </label><br>
+<input type="text" id="dientich">
+</body>
+<script>
+    function tinhDientich() {
+    var canha = parseFloat(document.getElementById("canha").value);
+    var canhb = parseFloat(document.getElementById("canhb").value);
+    dientich = canha * canhb;
+    document.getElementById("dientich").value = dientich;
+    }
+</script>
+</html>

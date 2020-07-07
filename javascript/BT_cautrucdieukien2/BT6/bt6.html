@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<label for="soa">Nhập số a: </label><br>
+<input type="text" id="soa"><br>
+<label for="sob">Nhập số b</label><br>
+<input type="text" id="sob"><br>
+<input type="button" value="Tính" onclick="giaiPt()">
+</body>
+<script>
+    function giaiPt() {
+        var soa = parseInt(document.getElementById("soa").value);
+        var sob = parseInt(document.getElementById("sob").value);
+        sox = 0;
+        if (soa == 0){
+            if (sob == 0){
+                alert("Phương trình vô số nghiệm");
+            }else if (sob != 0){
+                alert("Phương trình vô nghiệm");
+            }
+        }else {
+            sox = - sob / soa;
+            alert("Nghiệm của phương trình là: " + sox);
+        }
+
+    }
+</script>
+</html>

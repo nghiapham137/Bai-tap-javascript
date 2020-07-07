@@ -5,13 +5,36 @@
     <title>Hiển thị các số nguyên tố đầu tiên</title>
 </head>
 <body>
-<script>
-    var num = parseInt(prompt("Hãy nhập một số nguyên: "));
-    var count;
-    count = 0;
-    while (count <20 ){
-
-    }
-</script>
 </body>
+<script>
+    var N = +prompt("Nhập số N: ");
+    Display(N);
+    function Display(N) {
+
+        var number = 1;
+        var count = 0;
+        while (count < N){
+            if (isPrime(number)){
+                count++;
+                document.write(number + " ");
+            }
+            number++;
+        }
+    }
+
+    function isPrime(number) {
+        if (number < 2){
+            return false;
+        }
+        for (i= 2 ; i <= Math.sqrt(number);i++){
+            if (number % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+
+</script>
 </html>

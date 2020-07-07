@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính xem có phải tuổi người không?</title>
+</head>
+<body>
+<label for="tuoi">Nhập một số: </label><br>
+<input type="text" id="tuoi"><br>
+<input type="button" value="Check" onclick="Check()">
+</body>
+<script>
+    function Check() {
+        var tuoi = parseInt(document.getElementById("tuoi").value);
+        if (0 < tuoi && tuoi < 120){
+            alert(tuoi + "là tuổi của con người");
+        }else {
+            alert(tuoi + "ko phải là tuổi của con người");
+        }
+    }
+</script>
+</html>

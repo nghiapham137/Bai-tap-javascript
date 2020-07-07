@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+    <label for="sodien">Nhập số điện: </label><br>
+    <input type="text" id="sodien"><br>
+    <input type="button" value="Tính" onclick="tinhGiadien()"><br>
+    <label for="sotien">Số tiền điện bạn phải trả tháng này (+10% thuế VAT): </label><br>
+    <input type="text" id="sotien">
+</body>
+<script>
+    function tinhGiadien() {
+        var sodien = parseFloat(document.getElementById("sodien").value);
+        tiendien = 0;
+
+        const giadienbac1 = 1.678;
+        const giadienbac2 = 1.734;
+        const giadienbac3 = 2.014;
+        const giadienbac4 = 2.536;
+        const giadienbac5 = 2.834;
+        const giadienbac6 = 2.927;
+
+        if (0 <= sodien < 51){
+            tiendien = sodien * giadienbac1;
+            document.getElementById("sotien").value = tiendien + (tiendien * 0.1);
+        }
+        if (sodien < 101){
+            tiendien = (50 * giadienbac1) + (sodien - 50)*giadienbac2;
+            document.getElementById("sotien").value = tiendien + (tiendien * 0.1);
+        }
+        if (sodien < 201){
+            tiendien = (50 * giadienbac1) + (50 * giadienbac2) + (sodien - 100)*giadienbac3;
+            document.getElementById("sotien").value = tiendien + (tiendien * 0.1);
+        }
+        if (sodien < 301){
+            tiendien = (50 * giadienbac1) + (50 * giadienbac2) + (100 * giadienbac3) + (sodien - 200)*giadienbac4;
+            document.getElementById("sotien").value = tiendien + (tiendien * 0.1);
+        }
+        if (sodien < 401){
+            tiendien = (50 * giadienbac1) + (50 * giadienbac2) + (100 * giadienbac3) + (100 * giadienbac4) + (sodien - 300)*giadienbac5;
+            document.getElementById("sotien").value = tiendien + (tiendien * 0.1);
+        }
+        if (sodien > 401){
+            tiendien = (50 * giadienbac1) + (50 * giadienbac2) + (100 * giadienbac3) + (100 * giadienbac4) + (100*giadienbac5) + (sodien - 400)*giadienbac6;
+            document.getElementById("sotien").value = tiendien + (tiendien * 0.1);
+        }
+    }
+
+
+
+</script>
+</html>

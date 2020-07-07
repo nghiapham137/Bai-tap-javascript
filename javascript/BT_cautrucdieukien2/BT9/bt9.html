@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra cạnh của tam giác</title>
+</head>
+<body>
+    <label for="soa">Nhập vào số a: </label><br>
+    <input type="text" id="soa"><br>
+    <label for="sob">Nhập vào số b: </label><br>
+    <input type="text" id="sob"><br>
+    <label for="soc">Nhập vào số c: </label><br>
+    <input type="text" id="soc"><br>
+    <input type="button" value="Check" onclick="check()">
+</body>
+<script>
+    function check() {
+        var a = parseFloat(document.getElementById("soa").value);
+        var b = parseFloat(document.getElementById("sob").value);
+        var c = parseFloat(document.getElementById("soc").value);
+
+        if (a > 0 && b > 0 && c > 0){
+            if (a + b > c && b + c > a && a + c >b){
+                alert("Đây là 3 cạnh của tam giác");
+            }else {
+                alert("Đây ko phải là 3 cạnh của tam giác");
+            }
+        }else {
+            alert("Đây ko phải là 3 cạnh của tam giác");
+        }
+    }
+</script>
+</html>

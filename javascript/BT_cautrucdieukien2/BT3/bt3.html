@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+    <label for="canha">Nhập độ dài cạnh a:</label><br>
+    <input type="text" id="canha"><br>
+    <input type="button" value="Tính" onclick="change()"><br>
+    <label for="dientich">Diện tích hình vuông là: </label><br>
+    <input type="text" id="dientich">
+
+</body>
+<script>
+    function change() {
+        var canha = parseFloat(document.getElementById("canha").value);
+        dientich = Math.pow(canha,2);
+        document.getElementById("dientich").value = dientich;
+
+    }
+</script>
+</html>

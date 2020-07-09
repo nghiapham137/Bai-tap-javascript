@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+
+</head>
+<body>
+
+<div class = "table-container">
+    <p style="text-align: center">Player <span id="player">X</span>'s player turn</p>
+    <table align="center">
+        <tr>
+            <td class="box" id="0" onclick="AddVal(0)"></td>
+            <td class="box" id="1" onclick="AddVal(1)"></td>
+            <td class="box" id="2" onclick="AddVal(2)"></td>
+        </tr>
+        <tr>
+            <td class="box" id="3" onclick="AddVal(3)"></td>
+            <td class="box" id="4" onclick="AddVal(4)"></td>
+            <td class="box" id="5" onclick="AddVal(5)"></td>
+        </tr>
+        <tr>
+            <td class="box" id="6" onclick="AddVal(6)"></td>
+            <td class="box" id="7" onclick="AddVal(7)"></td>
+            <td class="box" id="8" onclick="AddVal(8)"></td>
+        </tr>
+    </table>
+    <h2 id="message">Player <span id="winner"></span> Wins</h2>
+    <input type="reset" id="restartButton" value="Restart" onclick="reSet()">
+</div>
+
+
+</body>
+
+</html>

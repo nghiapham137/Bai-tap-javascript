@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển đơn giản</title>
+    <style>
+        form{
+            width: 600px;
+            height: 120px;
+            margin-left: 400px;
+            margin-top: 50px;
+            border: 1px solid black;
+        }
+        h3{
+            text-align: center;
+        }
+        .text{
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<form id="form">
+    <h3>Từ điển đơn giản ít từ</h3>
+    <label for="english" class="text">English</label>
+    <input type="text" class="text" id="english">
+    <input type="button" class="text" value="Dịch" style="background: #2196F3" onclick="tranSlate()">
+    <label for="vietNam" class="text">Tiếng Việt</label>
+    <input type="text" id="vietNam" class="text">
+</form>
+</body>
+<script>
+    function tranSlate() {
+        var English = ["pornhub","xnxx","tokyo hot", "brazzers"];
+        var Vietnam = ["Pỏn húp", "web Tóan học", "Tokyo mùa hè", "Chữ nổi"];
+
+        var eng = document.getElementById("english").value;
+
+
+        for (let i = 0; i < English.length ; i++) {
+            if (eng === English[i]){
+                eng = Vietnam[i];
+                document.getElementById("vietNam").value = eng;
+                break;
+            }else if (i == English.length -1){
+                alert("Từ này ko có bạn êi");
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên lớn hơn 10 trong mảng</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [4,18,25,10,5,-1,9,35,9,12];
+    let num = "";
+    let count = 0;
+
+    for (let i = 0; i < arr.length ; i++) {
+        if (arr[i] >= 10 ){
+            num += arr[i] + ",";
+            count++;
+        }
+    }
+    document.write("Số lượng số lớn hơn bằng 10 là: " + count + " số" + "<br>");
+    document.write("Các số lớn hơn hoặc bằng 10 là: " + num);
+</script>
+</html>

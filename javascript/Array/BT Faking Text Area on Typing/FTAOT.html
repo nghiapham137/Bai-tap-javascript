@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Text Area on Typing</title>
+</head>
+<body>
+<center>
+<h1>Type anything Slowly</h1>
+<textarea id="inputval" style="width: 500px; height: 300px" onkeydown="pressAnykey()"></textarea>
+</center>
+</body>
+<script>
+    var fakeText = ["Hôm nay trời đẹp mây cao, tôi buồn không hiểu vì sao tôi buồn"];
+    var originText = document.getElementById("inputval").innerText;
+    var fakeText = fakeText[0];
+    var len = fakeText.length;
+    var on = false;
+
+
+</script>
+</html>

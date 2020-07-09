@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất trong mảng và hiển thị ra</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [15,25,10,-5,9,25,39,-18,0,36];
+    let max = arr[0];
+    let index = 0;
+
+    for (let i = 1; i < arr.length ; i++) {
+        if (arr[i] > max){
+            max = arr[i];
+            index = i;
+        }
+    }
+    document.write("Phần tử lớn nhất trong mảng là: "+ max + " tại vị trí: " + index);
+</script>
+</html>

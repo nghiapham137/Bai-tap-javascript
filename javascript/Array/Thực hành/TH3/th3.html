@@ -9,11 +9,11 @@
 </body>
 
 <script>
-    let so = prompt("Nhập một giá trị: ");
+    let so = parseInt(prompt("Nhập một giá trị: "));
     let array = [-2,4,5,8,-3,-10];
     for (let i = 0; i <array.length ; i++) {
         if (so == array[i]){
-            document.write("Giá trị nhập nằm trong vị trí " + i + " của mảng và mang giá trị là: " + array[i]);
+            document.write(so + " có trong mảng");
             document.write("<br>");
             break;
         }else {

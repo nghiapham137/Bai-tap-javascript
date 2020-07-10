@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình đếm số nguyên âm trong 1 chuỗi</title>
+</head>
+<body>
+
+</body>
+<script>
+    let numInput = prompt("Hãy nhập vào một số : ");
+    let numArray = numInput.split(" ");
+    let count = 0;
+    let num = "";
+
+    for (let i = 0; i < numInput.length ; i++) {
+        if (numArray[i] < 0){
+            num += numArray[i] + ",";
+            count++;
+        }
+
+    }
+    document.write("Tổng số nguyên âm có trong dãy là: " + count + " số" + "<br>");
+    document.write("Đó là các số: " + num);
+
+
+
+</script>
+</html>

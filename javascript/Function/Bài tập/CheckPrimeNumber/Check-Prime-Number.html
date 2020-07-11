@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Prime Number</title>
+</head>
+<body>
+
+</body>
+<script>
+    let CheckRange = parseInt(prompt("Hãy nhập khoảng bạn muốn kiểm tra: "));
+
+    Display(CheckRange);
+
+    function Display(CheckRange) {
+        let number = 1;
+        let count = 0;
+
+        while (number < CheckRange){
+            if (isPrimeNumber(number)){
+                count++;
+                document.write(number + "<br>");
+            }
+            number++;
+        }
+
+    }
+
+    function isPrimeNumber(number) {
+        if (number < 2){
+            return false;
+        }
+        for (i = 2; i <= Math.sqrt(number); i++){
+            if (number % i === 0){
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+</html>

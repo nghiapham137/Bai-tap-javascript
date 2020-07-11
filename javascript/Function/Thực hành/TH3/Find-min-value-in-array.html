@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Min Value in Array</title>
+</head>
+<body>
+
+</body>
+<script>
+    function inputElement(){
+        let ArrayLength = parseInt(prompt("Hãy nhập độ dài mảng: "));
+        let NewArray = [];
+        for (let i = 0; i < ArrayLength ; i++) {
+            let ArrayElement = parseInt(prompt("Hãy nhập phần tử cho mảng: "));
+            NewArray.push(ArrayElement);
+            }
+        return NewArray;
+    }
+
+    let Array = inputElement();
+
+    function findMinElement(Array){
+        if (Array.length === 0){
+            alert("Hàm này ko có giá trị để so sánh");
+        }else {
+            let min = Array[0];
+            for (let i = 0; i < Array.length ; i++) {
+                if (Array[i] < min){
+                    min = Array[i];
+                    }
+                }
+            return min;
+            }
+        }
+
+    let min = findMinElement(Array);
+    alert(min);
+
+</script>
+</html>

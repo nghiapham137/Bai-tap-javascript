@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+</head>
+<body>
+
+    <h2>Temperature Converter</h2>
+
+    <p>Type a value in the Fahrenheit field to convert the value to Celcius</p>
+
+    <label for="inputTemp">Fahrenheit</label>
+    <input type="number" id="inputTemp" oninput="temperatureConvert(this.value)"
+           onchange="temperatureConvert(this.value)"><br>
+
+    <p>Celcius: <span id = outputCelcius></span></p>
+
+</body>
+<script>
+
+    function temperatureConvert(Fdegree) {
+        Fdegree = parseFloat(Fdegree);
+        document.getElementById("outputCelcius").innerHTML = (Fdegree - 32) / 1.8 ;
+    }
+
+</script>
+</html>

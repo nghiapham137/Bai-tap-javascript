@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find a Circle Perimeter and Acreage</title>
+</head>
+<body>
+
+</body>
+<script>
+    let CircleRadius = +prompt("Hãy nhập bán kính hình tròn: ");
+    let Perimeter = ComputeCirclePerimeter(CircleRadius);
+    let Acreage = ComputeCircleAcreage(CircleRadius);
+
+    alert("Diện tích hình tròn là: " + Acreage + " " + "Chu vi hình tròn là: " + Perimeter);
+
+    function ComputeCirclePerimeter(radius) {
+        perimeter = (2 * radius) * Math.PI;
+        return perimeter.toFixed(2);
+    }
+
+    function ComputeCircleAcreage(radius) {
+        acreage = Math.pow(radius,2) * Math.PI;
+        return acreage.toFixed(2);
+    }
+
+
+
+</script>
+</html>

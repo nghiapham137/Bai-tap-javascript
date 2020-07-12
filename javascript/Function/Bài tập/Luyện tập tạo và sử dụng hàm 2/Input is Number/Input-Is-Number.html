@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input is number</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inPut = prompt("Hãy nhập vào một kí tự:");
+
+    let result = isNumber(inPut);
+
+    alert(result);
+
+    function isNumber(input) {
+        if (isNaN(input)){
+            return false;
+        }else {
+            return true;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meters Converter</title>
+</head>
+<body>
+    <h2>Merters Converter</h2>
+
+    <select id="select1">
+        <option value="Meters">Meters</option>
+        <option value="Feet">Feet</option>
+    </select>
+
+    <input type="text" id="inputValue" oninput="changeValue()" onchange="changeValue()">
+
+<!--    <input type="button" value="Convert" onclick="changeValue()">-->
+
+    <select id="select2">
+        <option value="Feet">Feet</option>
+        <option value="Meters">Meters</option>
+    </select>
+
+    <input type="text" id="outputValue">
+</body>
+<script>
+
+
+    function Convert(inputValue, select1, select2) {
+        let result = inputValue;
+
+        if (select1 === select2){
+            return inputValue;
+        }
+        if (select1 === "Meters" && select2 === "Feet"){
+            result = inputValue * 3.279;
+        }
+        if (select1 === "Feet" && select2 === "Meters"){
+            result = inputValue * 0.305;
+        }
+        
+        return result;
+    }
+    
+    function changeValue() {
+        let inputValue = document.getElementById("inputValue").value;
+        let select1 = document.getElementById("select1").value;
+        let select2 = document.getElementById("select2").value;
+        let outPut = Convert(inputValue,select1,select2);
+        document.getElementById("outputValue").value = outPut;
+    }
+</script>
+</html>

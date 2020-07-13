@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage App</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="form">
+    <h2>Add new product</h2>
+    <div class="input_field">
+        <input type="text" id="inputProduct" placeholder="New Product">
+        <input type="button" value="Add" id="Addbutton" onclick="AddProduct(this.value)">
+    </div>
+    <div class="Display_field">
+        <h2>Display All Product</h2>
+        <h3>Product name</h3>
+        <input type="text" id="ProductTotal"><br>
+        <div id="DisplayTable" onload="DisplayProduct()"></div>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>

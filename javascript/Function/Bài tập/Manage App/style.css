@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+h2 {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.input_field {
+    margin-top: 15px;
+    margin-left: 15px;
+    background-color: #f2f2f2;
+    width: 500px;
+    height: 100px;
+    border-radius: 5px;
+}
+#inputProduct {
+    margin-top: 30px;
+    margin-left: 15px;
+    width: 400px;
+    height: 40px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+#Addbutton {
+    width: 60px;
+    height: 40px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    border: 1px solid lightgreen;
+    color: white;
+}
+.Display_field {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+h3 {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+#DisplayTable {
+    margin-top: 20px;
+}
+#table {
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+#table td{
+    background-color: #f2f2f2;
+    border: 0;
+    border-radius: 5px;
+}
+.product {
+    width: 300px;
+    height: 40px;
+}
+.button {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color: #f2f2f2;
+}
+#ProductTotal {
+    color: darkred;
+}

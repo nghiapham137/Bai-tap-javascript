@@ -7,8 +7,8 @@ function DisplayProduct() {
 
     for (let i = 0; i < ProductName.length ; i++) {
         num = i;
-        let EditButton = "<input type='button' value='Edit' onclick='EditProduct("+i+")'>";
-        let DeleteButton = "<input type='button' value='Delete' onclick='DeleteProduct("+i+")'>";
+        let EditButton = "<input type='button' value='Edit' id='TableButton' onclick='EditProduct("+i+")'>";
+        let DeleteButton = "<input type='button' value='Delete' id='TableButton' onclick='DeleteProduct("+i+")'>";
         ProductTable = ProductTable + "<tr><td class='product'>"+ProductName[i]+"</td><td class='button'>"+EditButton+"</td><td class='button'>"+DeleteButton+"</td></tr>";
     }
     document.getElementById("DisplayTable").innerHTML = ProductTable;

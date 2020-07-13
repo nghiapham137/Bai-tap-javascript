@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Is Positive Integer</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number = prompt("Hãy nhập vào một số: ");
+    let result = isPositiveInteger(number);
+    alert(result);
+
+    function isPositiveInteger(number) {
+        if (number > 0 && number % 1 === 0 ){
+            return true;
+        }else {
+            return false;
+        }
+
+    }
+</script>
+</html>

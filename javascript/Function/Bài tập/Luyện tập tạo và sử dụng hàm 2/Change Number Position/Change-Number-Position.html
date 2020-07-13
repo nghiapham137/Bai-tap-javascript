@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Number Position</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number1 = parseInt(prompt("Nhập vào số thứ 1: "));
+    let number2 = parseInt(prompt("Nhập vào số thứ 2: "));
+
+     ChangePosition(number1,number2);
+
+
+    function ChangePosition(number1, number2) {
+        let number3 = number1;
+        number1 = number2;
+        number2 = number3;
+        alert("Thứ tự số sau khi thay đổi là: " + number1 + "," + number2);
+    }
+</script>
+</html>

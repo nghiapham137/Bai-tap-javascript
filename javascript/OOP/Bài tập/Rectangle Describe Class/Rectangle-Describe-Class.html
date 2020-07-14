@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build a Rectangle Class</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1500" height="750" style="border: 1px solid lightgray; background: lightgray; border-radius: 1px"></canvas>
+
+</body>
+<script>
+    let Rectangle = function (width , height) {
+        this.width = width;
+        this.height = height;
+
+        //Xây dựng phương thức
+        this.getArea = function () {
+            return width * height;
+        }
+        this.getPerimeter = function () {
+            return (width + height) * 2;
+
+        }
+    }
+
+    function createRectangle() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var rectangle = new Rectangle(Math.random()* 100,Math.random()*100);
+        var area = rectangle.getArea();
+        var perimeter = rectangle.getPerimeter();
+        var color = getRandomColor();
+
+        ctx.beginPath();
+        ctx.rect(Math.random()*1500, Math.random()*750, rectangle.width, rectangle.height);
+        ctx.fillStyle = color;
+        ctx.fill();
+
+        alert("Diện tích:" + area.toFixed(2) + " Chu vi: " + perimeter.toFixed(2));
+
+    }
+
+    function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+    }
+
+    function getRandomColor() {
+        var red = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+        return "rgb(" + red + "," + green + "," + blue + ")";
+
+    }
+
+    createRectangle();
+</script>
+</html>

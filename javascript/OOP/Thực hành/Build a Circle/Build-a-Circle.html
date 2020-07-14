@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build a Circle</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1600" height="900" style="border: 1px solid black"></canvas>
+</body>
+<script>
+
+function Circle(x , y , radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+}
+function createCircle() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var circle = new Circle(Math.random()*1600, Math.random()*900 , Math.random()*100);
+    var color = getRandomColor();
+
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+}
+
+function getRandomHex() {
+    return Math.floor(Math.random()*255);
+}
+
+function getRandomColor() {
+    var red = getRandomHex();
+    var green = getRandomHex();
+    var blue = getRandomHex();
+    return "rgb(" + red + "," + green + "," + blue + ")";
+}
+
+function createMultipleCircle() {
+    for (let i = 0; i < 30 ; i++) {
+        createCircle();
+    }
+}
+
+createMultipleCircle();
+    </script>
+    </html>

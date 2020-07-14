@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Class</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    let inPut = +prompt("Hãy nhập vào nhiệt độ: ");
+
+    if (inPut >= -273){
+        var temperature = function (degree) {
+            this.degree = degree;
+
+            this.getCelcius = function () {
+                return this.degree;
+            }
+            this.getFahrenheit = function () {
+                return degree * 1.8 + 32;
+            }
+            this.getKelvin = function () {
+                return degree + 273.15;
+            }
+
+        }
+    }else {
+        alert("Bạn phải nhập nhiệt độ cao hơn nữa");
+    }
+
+    let temp = new temperature(inPut);
+    let celcius = temp.getCelcius();
+    let fahrenheit = temp.getFahrenheit();
+    let Kelvin = temp.getKelvin();
+
+    alert("Độ C: " + celcius + " ,độ F tương ứng là: " + fahrenheit + " ,độ K tương ứng là:  " + Kelvin);
+</script>
+</html>

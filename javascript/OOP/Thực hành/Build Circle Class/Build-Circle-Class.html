@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build Circle Class</title>
+</head>
+<body>
+
+</body>
+<script>
+    let Circle = function (radius , color ) {
+        this.radius = radius;
+        this.color = color;
+
+        //Xây dựng phương thức
+
+        this.getRadius = function () {
+            return this.radius;
+        }
+        this.getArea = function () {
+            return Math.PI * radius * radius;
+        }
+        this.getColor = function () {
+            return this.color;
+        }
+    }
+
+    let FullCircle = new Circle(4,"blue");
+
+    let radius = FullCircle.getRadius();
+    let color = FullCircle.getColor();
+    let Area = FullCircle.getArea();
+
+    alert("radius: " + radius + "; area: " + Area + "; color: " + color);
+</script>
+</html>

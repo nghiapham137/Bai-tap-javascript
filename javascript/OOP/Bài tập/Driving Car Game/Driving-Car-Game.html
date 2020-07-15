@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driving Car Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startGame()">
+<canvas id="myCanvas" width="1000" height="600"></canvas>
+
+</body>
+</html>
+<script>
+    var peoPle = [];
+    var myCar ;
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    window.addEventListener("keydown",turnSelection);
+    window.addEventListener("keydown",changeSpeed);
+    function startGame() {
+        myCar = new ComponentCar(500, 300, 35 , 65);
+        for (let i = 0; i < 10; i++) {
+            peoPle[i] = new ComponentPeople(Math.random()*1000,- Math.random()*300,35,50);
+        }
+        setInterval(updateGameArea,20);
+    }
+
+
+    function ComponentPeople(x,y,width,height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.directionX = 0;
+        this.directionY = 1;
+        this.img = new Image();
+        this.img.src = "images/people.png";
+        this.show = function () {
+            ctx.drawImage(this.img,this.x,this.y,this.width,this.height);
+        }
+        this.newPos = function () {
+            this.y += this.directionY;
+            if (this.y > canvas.height - this.height){
+                this.y = 0;
+                this.x = Math.random()*1000;
+            }
+        }
+
+    }
+    
+    function ComponentCar(x,y,width,height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.directionX = 0;
+        this.directionY = -1;
+        this.img = new Image();
+        this.img.src = "images/car.jpg";
+        this.show = function(){
+
+            ctx.drawImage(this.img,this.x,this.y,this.width,this.height );
+
+        }
+
+        this.newPos = function () {
+            this.x += this.directionX;
+            this.y += this.directionY;
+            if (this.x < 0){
+                this.x = canvas.width - this.width;
+            }
+            if (this.x > canvas.width - this.width){
+                this.x = 0;
+            }
+            if (this.y <= 0){
+                this.y = canvas.height - this.height;
+            }
+            if (this.y > canvas.height - this.height){
+                this.y = 0;
+            }
+
+        }
+        // this.crashWith = function (otherObj) {
+        //     var myLeft = this.x;
+        //     var myRight = this.x + this.width;
+        //     var myTop = this.y;
+        //     var myBottom = this.y + this.height;
+        //     var otherLeft = otherObj.x;
+        //     var otherRight = otherObj.x + otherObj.width;
+        //     var otherTop = otherObj.y;
+        //     var otherBottom = otherObj.y + otherObj.height;
+        //     var crash = true;
+        //     if ((myBottom < otherTop) || (myTop > otherBottom) || (myRight < otherLeft) || (myLeft > otherRight) ){
+        //         crash = false;
+        //     }
+        //     return crash;
+        //
+        // }
+
+    }
+
+    function updateGameArea() {
+        // if (myCar.crashWith(peoPle)){
+        //     clearInterval(setInterval(updateGameArea,20));
+        // }else {
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            myCar.newPos();
+            myCar.show();
+            for (let i = 0; i <10 ; i++) {
+                peoPle[i].newPos();
+                peoPle[i].show();
+            }
+        // }
+
+
+    }
+
+    function turnSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                myCar.directionX = -1;
+                myCar.directionY = 0;
+                break;
+            case 39:
+                myCar.directionX = +1;
+                myCar.directionY = 0;
+                break;
+
+            case 38:
+                myCar.directionX = 0;
+                myCar.directionY = -1;
+                break;
+
+            case 40:
+                myCar.directionX = 0;
+                myCar.directionY = +1;
+                break;
+        }
+
+    }
+    function changeSpeed(evt) {
+        if (evt.keyCode === 17){
+            setInterval(updateGameArea,0.2);
+        }
+    }
+
+    // function crashWith(otherobj) {
+    //     var myLeft = myCar.x;
+    //     var myRight =
+    //
+    // }
+
+</script>

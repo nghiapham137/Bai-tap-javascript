@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam & Eva</title>
+</head>
+<body>
+
+</body>
+<script>
+    let Apple = function () {
+        this.weight = 10;
+
+        this.getAppleWeight = function () {
+            return this.weight;
+        }
+
+        this.decrease = function () {
+            if (this.weight > 0){
+                this.weight--;
+            }
+        }
+
+        this.isEmpty = function () {
+            return this.weight === 0;
+        };
+
+    }
+
+    let Human = function (name, gender , weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+
+        this.setName = function (name) {
+            this.name = name;
+        }
+        this.setWeight = function (weight) {
+            this.weight = weight;
+        }
+
+        this.getHumanInfo = function () {
+            return this.name + "," + this.gender + "," + this.weight;
+        }
+
+        this.talk = function () {
+            document.write("Hello, I'm " + this.name);
+
+        }
+
+        this.setGender = function (gender) {
+            this.gender = gender;
+        }
+
+        this.eatAple = function () {
+            if (!tao.isEmpty()){
+                tao.decrease();
+                this.weight++;
+            }
+        }
+
+        this.checkApple = function () {
+            return tao.getAppleWeight();
+
+        }
+
+    }
+
+    let tao = new Apple();
+
+    let human1 = new Human();
+    human1.setName("Adam");
+    human1.setGender("Male");
+    human1.setWeight(75);
+    human1.eatAple();
+    human1.talk();
+    console.log(human1.getHumanInfo());
+
+    let human2 = new Human();
+    human2.setName("Eva");
+    human2.setGender("Female");
+    human2.setWeight("60");
+    human2.eatAple();
+    human2.talk();
+    console.log(human2.getHumanInfo());
+
+    console.log(human2.checkApple());
+
+    while (tao.getAppleWeight()>0){
+        human1.eatAple(tao);
+        if (tao.getAppleWeight()>0){
+            human2.eatAple(tao);
+        }
+    }
+
+
+</script>
+</html>

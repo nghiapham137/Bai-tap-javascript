@@ -1,7 +1,11 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-window.addEventListener("keydown",turnSelection);
 var object;
+
+
+window.addEventListener("keydown",turnSelection);
+
+
 function startGame(){
     object = new creatImage(500,300,50,80);
     setInterval(updateGame,20);
@@ -31,9 +35,6 @@ let creatImage = function (x,y,width,height) {
     }
 
 }
-
-
-
 
 function turnSelection(evt) {
 
